@@ -1,0 +1,15 @@
+{
+  "headers": [
+    {
+      "source": "/Frineve-Presupuesto-FR-01.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "attachment; filename=\"Frineve-Presupuesto-FR-01.pdf\"" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

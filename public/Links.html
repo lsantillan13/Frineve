@@ -195,16 +195,19 @@ principal.addEventListener('click', (e)=>{
 });
 
 // PDF download tracking opcional
-document.getElementById('btnPdf').addEventListener('click', ()=>{
-  console.log('PDF descarga iniciada: Frineve-Presupuesto-FR-01');
-});
-
-// Links externos target blank automático (solo http externos)
-document.querySelectorAll('a[href^="http"]').forEach(a=>{
-  try{
-    const u = new URL(a.href);
-    if(u.host !== location.host){ a.target="_blank"; a.rel="noopener noreferrer"; }
-  }catch{}
+document.getElementById('btnPdf').addEventListener('click', async (e) => {
+  e.preventDefault();
+  const url = '/Frineve-Presupuesto-FR-01.pdf';
+  const res = await fetch(url);
+  const blob = await res.blob();
+  const blobUrl = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = blobUrl;
+  a.download = 'Frineve-Presupuesto-FR-01.pdf';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(blobUrl);
 });
 </script>
 </body>
