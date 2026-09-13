@@ -10,6 +10,7 @@
   ],
   "rewrites": [
     { "source": "/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+    { "source": "/(.*)\\.(html|pdf|png|jpg|jpeg|svg|webp|js|css|ico)", "destination": "/$1.$2" }
+  ],
+  "cleanUrls": true
 }
