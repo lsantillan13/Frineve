@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frineve — Links Oficiales</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+*{ -webkit-font-smoothing:antialiased }
+body{font-family:'Inter',system-ui,sans-serif}
+.syne{font-family:'Syne',sans-serif}
+.grid-bg{
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:32px 32px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 60%, transparent 95%);
+}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes confetti{0%{transform:translate3d(0,0,0) rotate(0deg) scale(1);opacity:1}100%{transform:translate3d(var(--tx),260px,0) rotate(720deg) scale(0.6);opacity:0}}
+.magnetic{transition:transform 0.24s cubic-bezier(0.22,1,0.36,1)}
+</style>
+</head>
+<body class="min-h-screen bg-[#0A0A0B] text-white selection:bg-[#FF006B] selection:text-white relative overflow-x-hidden">
+<!-- progress -->
+<div class="fixed top-0 left-0 right-0 h-[2px] z-[100] bg-white/5"><div id="progress" class="h-full bg-gradient-to-r from-[#FF006B] to-[#8B00FF] transition-[width] duration-150" style="width:0%"></div></div>
+<!-- blobs -->
+<div class="pointer-events-none fixed inset-0">
+  <div class="absolute -top-[180px] left-1/2 -translate-x-1/2 w-[720px] h-[520px] bg-[#FF006B]/20 rounded-full blur-[120px]"></div>
+  <div class="absolute top-[220px] right-[-120px] w-[480px] h-[480px] bg-[#8B00FF]/20 rounded-full blur-[110px]"></div>
+  <div class="absolute bottom-[-100px] left-[-120px] w-[560px] h-[560px] bg-[#FF006B]/[0.12] rounded-full blur-[130px]"></div>
+  <div class="grid-bg absolute inset-0 opacity-[0.35]"></div>
+</div>
+<!-- ticker -->
+<div class="relative z-20 border-b border-white/[0.06] bg-white/[0.02] backdrop-blur-xl">
+  <div class="overflow-hidden whitespace-nowrap py-[9px]">
+    <div class="animate-[marquee_24s_linear_infinite] inline-flex">
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+      <span class="syne text-[11px] tracking-[0.18em] font-bold text-white/50"> FRINEVÉ • ARTESANAL • -18°C • NEUQUÉN • HELADOS PREMIUM • </span>
+    </div>
+  </div>
+</div>
+
+<div class="relative z-10 mx-auto w-full max-w-[440px] px-5 sm:px-6 pt-10 pb-12">
+  <header class="flex flex-col items-center text-center">
+    <div class="relative">
+      <div class="absolute -inset-4 bg-gradient-to-br from-[#FF006B] to-[#8B00FF] rounded-[28px] blur-[18px] opacity-40"></div>
+      <div class="relative w-[84px] h-[84px] rounded-[22px] bg-white text-black flex items-center justify-center shadow-[0_12px_40px_rgba(255,0,107,0.25),0_0_0_1px_rgba(255,255,255,0.08)] overflow-hidden">
+        <!-- Fallback logo: si no existe ./assets/frineve_logo_transparent.png muestra F. -->
+        <img src="./assets/frineve_logo_transparent.png" alt="Frineve Logo" class="w-[72%] h-[72%] object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <span style="display:none" class="syne font-[800] text-[28px] leading-none tracking-[-0.02em] w-full h-full items-center justify-center">F<span class="text-[#FF006B]">.</span></span>
+      </div>
+      <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-[#0A0A0B] rounded-full border border-white/10 flex items-center justify-center">
+        <div class="w-[7px] h-[7px] bg-[#22C55E] rounded-full animate-pulse shadow-[0_0_0_4px_rgba(34,197,94,0.25)]"></div>
+      </div>
+    </div>
+    <h1 class="syne mt-6 text-[34px] sm:text-[38px] font-[800] tracking-[-0.03em] leading-[0.9]">FRINEVÉ<span class="text-[#FF006B]">.</span></h1>
+    <p class="mt-2.5 text-[13px] font-medium tracking-wide text-white/60 uppercase">Helados Artesanales • Neuquén</p>
+    <div class="mt-5 inline-flex items-center gap-2.5 rounded-full bg-white/[0.06] border border-white/[0.08] backdrop-blur-xl px-3.5 py-1.5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]">
+      <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22C55E] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#22C55E] shadow-[0_0_8px_#22C55E]"></span></span>
+      <span class="syne text-[10.5px] font-bold tracking-[0.14em] text-white/80">-18°C MONITOREADO</span>
+    </div>
+  </header>
+
+  <div class="mt-10 flex flex-col gap-[14px]">
+    <!-- PRINCIPAL -->
+    <a href="/index.html" id="btnPrincipal" class="magnetic group relative flex items-center gap-4 rounded-[20px] px-[18px] py-[18px] bg-gradient-to-br from-[#FF006B] to-[#8B00FF] text-white shadow-[0_12px_32px_rgba(255,0,107,0.35),0_0_0_1px_rgba(255,255,255,0.12)_inset] hover:-translate-y-[2px] hover:scale-[1.01] active:translate-y-[0px] active:scale-[0.99] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-[20px]"><div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[900ms]"></div></div>
+      <div class="relative shrink-0 w-11 h-11 rounded-[13px] flex items-center justify-center bg-white/15 backdrop-blur border border-white/20">✨</div>
+      <div class="flex-1 text-left min-w-0">
+        <div class="flex items-center gap-2"><span class="syne font-bold tracking-[-0.01em] leading-none text-[16px] text-white">frineve.com</span><span class="hidden sm:inline-flex ml-1 rounded-full bg-white/20 px-2 py-0.5 text-[9px] font-bold tracking-widest text-white/90">PRINCIPAL</span></div>
+        <div class="mt-1 text-[12.5px] leading-[1.2] font-medium truncate text-white/75">Landing page / Institucional</div>
+      </div>
+      <div class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-white/15 group-hover:bg-white text-white group-hover:text-[#FF006B] transition-all duration-300">↗</div>
+    </a>
+
+    <!-- CATALOGO -->
+    <a href="/Minorista.html" class="magnetic group relative flex items-center gap-4 rounded-[20px] px-[18px] py-[18px] bg-white text-[#0A0A0B] shadow-[0_10px_28px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.6)_inset] hover:shadow-[0_16px_36px_rgba(0,0,0,0.45),0_0_0_1px_rgba(255,0,107,0.35)_inset] border border-white hover:-translate-y-[2px] hover:scale-[1.01] active:translate-y-[0px] active:scale-[0.99] transition-all duration-300">
+      <div class="relative shrink-0 w-11 h-11 rounded-[13px] flex items-center justify-center bg-[#0A0A0B]/[0.06] group-hover:bg-[#FF006B]/10 border border-black/5 group-hover:border-[#FF006B]/20">🛍</div>
+      <div class="flex-1 text-left min-w-0">
+        <div class="syne font-bold tracking-[-0.01em] leading-none text-[16px]">Catálogo</div>
+        <div class="mt-1 text-[12.5px] leading-[1.2] font-medium truncate text-black/55 group-hover:text-black/70">Helados & postres artesanales</div>
+      </div>
+      <div class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-black/[0.04] group-hover:bg-[#FF006B] text-black/40 group-hover:text-white transition-all">↗</div>
+      <div class="pointer-events-none absolute -inset-[1px] rounded-[20px] opacity-0 group-hover:opacity-100 transition-opacity border border-[#FF006B]/40"></div>
+    </a>
+
+    <!-- PUNTOS -->
+    <a href="/Club.html" class="magnetic group relative flex items-center gap-4 rounded-[20px] px-[18px] py-[18px] bg-white text-[#0A0A0B] shadow-[0_10px_28px_rgba(0,0,0,0.35)] border border-white hover:-translate-y-[2px] hover:scale-[1.01] active:translate-y-[0px] active:scale-[0.99] transition-all">
+      <div class="relative shrink-0 w-11 h-11 rounded-[13px] flex items-center justify-center bg-[#0A0A0B]/[0.06] group-hover:bg-[#FF006B]/10 border">⭐</div>
+      <div class="flex-1 text-left min-w-0">
+        <div class="flex flex-wrap items-center gap-2"><span class="syne font-bold text-[15px] sm:text-[16px] leading-tight">Frineve Club / Sistema de Puntos</span><span class="inline-flex items-center rounded-full bg-[#0A0A0B] text-white text-[9px] font-bold tracking-widest px-2 py-0.5">NUEVO</span></div>
+        <div class="mt-1 text-[12.5px] text-black/55">Acumulá y canjeá premios · Neuquén/Cipolletti</div>
+      </div>
+      <div class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-black/[0.04] group-hover:bg-[#FF006B] text-black/40 group-hover:text-white">↗</div>
+    </a>
+
+    <!-- MAYORISTA -->
+    <a href="/Mayorista.html" class="magnetic group relative flex items-center gap-4 rounded-[20px] px-[18px] py-[18px] bg-white text-[#0A0A0B] shadow-[0_10px_28px_rgba(0,0,0,0.35)] border border-white hover:-translate-y-[2px] hover:scale-[1.01] transition-all">
+      <div class="relative shrink-0 w-11 h-11 rounded-[13px] flex items-center justify-center bg-[#0A0A0B]/[0.06] group-hover:bg-[#FF006B]/10 border">🏢</div>
+      <div class="flex-1 text-left min-w-0">
+        <div class="flex items-center gap-2"><span class="syne font-bold text-[16px]">Mayorista</span><span class="inline-flex items-center rounded-full bg-[#0A0A0B] text-white text-[9px] font-bold tracking-widest px-2 py-0.5">B2B</span></div>
+        <div class="mt-1 text-[12.5px] text-black/55">OPCIONAL - NO INCLUIDO</div>
+      </div>
+      <div class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-black/[0.04] group-hover:bg-[#FF006B] text-black/40 group-hover:text-white">↗</div>
+    </a>
+
+    <!-- PRESUPUESTO WEB -->
+    <a href="/Presupuesto-Web.html" class="magnetic group relative flex items-center gap-4 rounded-[20px] px-[18px] py-[18px] bg-white text-[#0A0A0B] shadow-[0_10px_28px_rgba(0,0,0,0.35)] border border-white hover:-translate-y-[2px] hover:scale-[1.01] transition-all">
+      <div class="relative shrink-0 w-11 h-11 rounded-[13px] flex items-center justify-center bg-[#0A0A0B]/[0.06] group-hover:bg-[#FF006B]/10 border">🧮</div>
+      <div class="flex-1 text-left min-w-0">
+        <div class="syne font-bold text-[16px]">Presupuesto Web</div>
+        <div class="mt-1 text-[12.5px] text-black/55">Ver detalle interactivo del proyecto</div>
+      </div>
+      <div class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-black/[0.04] group-hover:bg-[#FF006B] text-black/40 group-hover:text-white">↗</div>
+    </a>
+
+    <!-- PRESUPUESTO PDF - DESCARGA DIRECTA -->
+    <a href="/Frineve-Presupuesto.pdf" download="Frineve-Presupuesto-FR-01.pdf" id="btnPdf" class="magnetic group relative flex items-center gap-4 rounded-[20px] px-[18px] py-[18px] bg-white text-[#0A0A0B] shadow-[0_10px_28px_rgba(0,0,0,0.35)] border border-white hover:-translate-y-[2px] hover:scale-[1.01] active:scale-[0.99] transition-all">
+      <div class="relative shrink-0 w-11 h-11 rounded-[13px] flex items-center justify-center bg-[#FF006B]/10 border border-[#FF006B]/20">📄</div>
+      <div class="flex-1 text-left min-w-0">
+        <div class="flex items-center gap-2"><span class="syne font-bold text-[16px]">Presupuesto PDF</span><span class="inline-flex items-center rounded-full bg-[#FF006B] text-white text-[9px] font-bold tracking-widest px-2 py-0.5">DESCARGA</span></div>
+        <div class="mt-1 text-[12.5px] text-black/55">Descargar PDF oficial · FR-01 </div>
+      </div>
+      <div class="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-[#0A0A0B] group-hover:bg-[#FF006B] text-white transition-all">⬇</div>
+      <div class="pointer-events-none absolute -inset-[1px] rounded-[20px] opacity-0 group-hover:opacity-100 transition-opacity border border-[#FF006B]/40"></div>
+    </a>
+  </div>
+
+  <div class="mt-10 flex items-center gap-3"><div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div><div class="w-1 h-1 rounded-full bg-white/20"></div><div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+
+  <footer class="mt-8">
+    <a href="https://facebook.com/patagoniafullstack" target="_blank">
+    <div class="rounded-[20px] bg-white border border-white/60 shadow-[0_12px_32px_rgba(0,0,0,0.35)] p-4 flex items-center gap-3.5">
+      <div class="shrink-0 w-11 h-11 rounded-[12px] bg-gradient-to-br from-[#FF006B] to-[#8B00FF] text-white flex items-center justify-center font-bold syne text-[14px] tracking-wide shadow-[0_6px_18px_rgba(255,0,107,0.35)]">{fs}</div>
+      <div class="min-w-0 flex-1 leading-tight">
+        <div class="text-[11px] font-bold tracking-[0.14em] text-black/50 uppercase">Hecho por</div>
+        <div class="syne font-bold text-[13.5px] tracking-[-0.01em] text-[#0A0A0B]">Patagonia Fullstack</div>
+        <div class="text-[11px] font-medium text-black/50">DESARROLLADOR • patagonia.fs</div>
+      </div>
+      <div class="shrink-0 hidden sm:flex items-center gap-1.5 rounded-full bg-[#0A0A0B] text-white px-2.5 py-1"><div class="w-1.5 h-1.5 bg-[#22C55E] rounded-full animate-pulse"></div><span class="text-[10px] font-bold tracking-widest">LIVE</span></div>
+    </div>
+    </a>
+    <p class="mt-5 text-center text-[11px] font-medium tracking-wide text-white/35">© <span id="year"></span> Frinevé • Helados Artesanales • Neuquén, Patagonia</p>
+  </footer>
+</div>
+
+<div id="confettiContainer"></div>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 h-[30vh] bg-gradient-to-t from-black/40 to-transparent"></div>
+
+<script>
+// Año
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Progress bar
+window.addEventListener('scroll', ()=> {
+  const doc = document.documentElement;
+  const p = window.scrollY / (doc.scrollHeight - window.innerHeight || 1);
+  document.getElementById('progress').style.width = (Math.min(Math.max(p,0),1)*100)+'%';
+}, {passive:true});
+
+// Magnetic
+document.querySelectorAll('.magnetic').forEach(btn=>{
+  const isTouch = 'ontouchstart' in window;
+  if(isTouch) return;
+  btn.addEventListener('mousemove', e=>{
+    const r = btn.getBoundingClientRect();
+    const mx = (e.clientX - r.left - r.width/2)*0.12;
+    const my = (e.clientY - r.top - r.height/2)*0.18;
+    btn.style.transform = `translate3d(${mx}px, ${my}px, 0)`;
+  });
+  btn.addEventListener('mouseleave', ()=>{ btn.style.transform = 'translate3d(0,0,0)'; });
+});
+
+// Confetti en principal
+const principal = document.getElementById('btnPrincipal');
+principal.addEventListener('click', (e)=>{
+  const colors = ["#FF006B","#8B00FF","#ffffff","#FF3B8A"];
+  const container = document.getElementById('confettiContainer');
+  const rect = e.currentTarget.getBoundingClientRect();
+  const cx = rect.left + rect.width/2;
+  const cy = rect.top + rect.height/2;
+  for(let i=0;i<28;i++){
+    const el = document.createElement('span');
+    const tx = (Math.random()-0.5)*200;
+    el.style.cssText = `position:fixed;left:${cx}px;top:${cy}px;width:8px;height:12px;border-radius:2px;background:${colors[Math.floor(Math.random()*colors.length)]};pointer-events:none;z-index:90;--tx:${tx}px;animation:confetti 1.4s cubic-bezier(0.22,1,0.36,1) forwards;transform:rotate(${Math.random()*360}deg)`;
+    container.appendChild(el);
+    setTimeout(()=> el.remove(), 1600);
+  }
+});
+
+// PDF download tracking opcional
+document.getElementById('btnPdf').addEventListener('click', ()=>{
+  console.log('PDF descarga iniciada: Frineve-Presupuesto-FR-01');
+});
+
+// Links externos target blank automático (solo http externos)
+document.querySelectorAll('a[href^="http"]').forEach(a=>{
+  try{
+    const u = new URL(a.href);
+    if(u.host !== location.host){ a.target="_blank"; a.rel="noopener noreferrer"; }
+  }catch{}
+});
+</script>
+</body>
+</html>
